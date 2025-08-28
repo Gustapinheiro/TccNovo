@@ -1,6 +1,5 @@
 import Robo from '../assets/RoboMascoteRosa.png'
 import DedoAP from '../assets/DedoApontando.png'
-
 export default function MainPraticar() {
   
 

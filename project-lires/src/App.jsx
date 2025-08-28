@@ -5,6 +5,9 @@ import Personagem from './pages/Personagem';
 import Inicio from './pages/Inicio';
 import Loja from './pages/Loja';
 import Praticar from './pages/Praticar';
+import FeedLires from './components/FeedLires';
+import EncerramentoL from './components/EncerramentoLires';
+import ConfiguracoesdePrivacidade from './components/ConfiguracoesPrivacidade';
 
 
 function App() {
@@ -13,8 +16,8 @@ function App() {
       <div className="flex min-h-screen bg-white">
         {/* Define the routes for the application */}
         <Routes>
-          <Route path="/" element={<User />} />
-          <Route path="/personagem" element={<Personagem />} />
+          <Route path="/" element={<ConfiguracoesdePrivacidade/>} />
+          <Route path="/personagem" element={<FeedLires />} />
           <Route path="/inicio" element={<Inicio />} />
           <Route path="/user" element={<User />} />
           <Route path='/loja' element={<Home/>} />
