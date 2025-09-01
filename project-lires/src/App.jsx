@@ -7,7 +7,7 @@ import Loja from './pages/Loja';
 import Praticar from './pages/Praticar';
 import FeedLires from './components/FeedLires';
 import EncerramentoL from './components/EncerramentoLires';
-import ConfiguracoesdePrivacidade from './components/ConfiguracoesPrivacidade';
+import Configuracoes from './pages/Configurações';
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
       <div className="flex min-h-screen bg-white">
         {/* Define the routes for the application */}
         <Routes>
-          <Route path="/" element={<ConfiguracoesdePrivacidade/>} />
+          <Route path="/" element={<Configuracoes />} />
           <Route path="/personagem" element={<FeedLires />} />
           <Route path="/inicio" element={<Inicio />} />
           <Route path="/user" element={<User />} />
