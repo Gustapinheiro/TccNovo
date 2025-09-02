@@ -206,10 +206,10 @@ export default function Configuracoes() {
             </div>
 
             {/* Sidebar direita - FIXO À DIREITA (apenas desktop xl+) */}
-            <div className="hidden xl:flex xl:fixed xl:right-0 xl:top-0 xl:w-80 xl:h-screen xl:bg-gray-50 xl:p-4 xl:pt-8">
-                <div className="w-full space-y-8 xl:mt-4">
+            <div className="hidden xl:flex xl:fixed xl:right-0 xl:top-0 xl:w-80 xl:h-screen xl:bg-gray-50 xl:p-3 xl:pt-0 ">
+                <div className="w-full space-y-2 xl:mt-4">
                     {/* Menu Conta */}
-                    <div className="bg-white border-2 border-purple-400 rounded-3xl p-6">
+                    <div className="bg-white border-2 border-purple-400 rounded-3xl p-4">
                         <h2 className="text-purple-600 text-xl font-semibold mb-6">
                             Conta
                         </h2>
@@ -258,7 +258,7 @@ export default function Configuracoes() {
                             <h2
                                 className="text-4xl font-bold text-transparent bg-clip-text"
                                 style={{
-                                    backgroundImage: "linear-gradient(90deg, #8100c6, #ffd2fd, #1E90FF, #c700ff)",
+                                    backgroundImage: "linear-gradient(90deg, #8100c6, #ae00bd,  #005dfa, #347fff, #bf64ff)",
                                     backgroundSize: "300% 300%",
                                     animation: "gradientMove 15s ease infinite",
                                     textShadow: "0 0 20px rgba(123, 104, 238, 0.7)",
@@ -270,7 +270,7 @@ export default function Configuracoes() {
                             <h3
                                 className="text-3xl font-semibold text-transparent bg-clip-text"
                                 style={{
-                                    backgroundImage: "linear-gradient(90deg, #8100c6, #ffd2fd, #1E90FF, #c700ff)",
+                                    backgroundImage: "linear-gradient(90deg, #8100c6, #ae00bd,  #005dfa, #347fff, #bf64ff)",
                                     backgroundSize: "300% 300%",
                                     animation: "gradientMove 15s ease infinite",
                                     textShadow: "0 0 20px rgba(123, 104, 238, 0.7)",
