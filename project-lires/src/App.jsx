@@ -8,6 +8,7 @@ import Praticar from './pages/Praticar';
 import FeedLires from './components/FeedLires';
 import EncerramentoL from './components/EncerramentoLires';
 import Configuracoes from './pages/Configurações';
+import Notificação from './pages/Notificação';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/user" element={<User />} />
           <Route path='/loja' element={<Home/>} />
           <Route path='/Praticar' element={<Loja/>} />
+          <Route path='/Notificações' element={<Notificação/>} />
           {/* Add more routes as needed */}
         </Routes>
       </div>
