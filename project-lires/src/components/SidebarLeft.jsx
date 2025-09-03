@@ -26,7 +26,7 @@ export default function SidebarLeft() {
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   return (
-    <aside className={`${isCollapsed ? 'w-16' : 'w-48'} bg-white border-r border-gray-200 flex flex-col items-center py-8 transition-all duration-300 ease-in-out shadow-lg relative group fixed left-0 top-0 h-full z-10`}>
+    <aside className={`${isCollapsed ? 'w-16' : 'w-48'} bg-white  border-r border-gray-200 flex flex-col items-center py-8 transition-all duration-300 ease-in-out shadow-lg  group fixed left-0 top-0 h-full z-10`}>
       
       {/* Logo com efeito hover */}
       <div className="mb-8 transform transition-transform duration-200 hover:scale-110">

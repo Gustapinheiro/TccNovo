@@ -3,20 +3,25 @@ import SidebarLeft from '../components/SidebarLeft';
 
 
 export default function Configuracoes() {
-   
+    const [silenciarnotificacoes, setSilenciarNotificacoes] = useState("Nunca");
     const [frequencia, setFrequencia] = useState("Diária");
     const [horario, setHorario] = useState("Manhã");
-    const [desafios, setdesafios] = useState(true);
-    const [convites, setconvites] = useState(true);
-    const [progresso, setprogresso] = useState(true);
+
+    {/*switchs ligações */}
+
+    const [lembretediario, setLembreteDiario] = useState(true);
+    const [progressoeconquista, setProgressoeConquista] = useState(true);
+    const [rankingcompeticao, setRankingCompeticao] = useState(true);
+    const [interacoessociais, setInteracoesSociais] = useState(true);
+    const [eventosespeciais, setEventosEspeciais] = useState(false);
 
     return (
-        <div className="min-h-screen bg-gray-50 flex flex-row ">
+        <div className="min-h-screen bg-gray-50 flex flex-row  ">
             {/* Sidebar fixo à esquerda */}
             <SidebarLeft />
 
             {/* Conteúdo principal com margem para o sidebar esquerdo e direito */}
-            <div className="ml-48 xl:mr-80 p-4 lg:p-8 flex-1">
+            <div className="ml-96 xl:mr-80 p-4 lg:p-8 flex-1 ">
                 {/* Título principal */}
                 <h1 className="text-purple-600 font-bold text-2xl md:text-3xl lg:text-5xl mb-8  " >
                     Informação de Notificação
@@ -74,32 +79,27 @@ export default function Configuracoes() {
                           Silenciar Notificações Por:
                           </h3>
 
-       
-
-                        
-
-                            
-                        
+                        <div className="space-y-4">
+                            <select
+                                value={silenciarnotificacoes}
+                                onChange={(e) => setSilenciarNotificacoes(e.target.value)}
+                                className='w-full max-w-md border-2 border-green-400 rounded-full px-4 py-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-400'>
+                                <option value="1 hora">1 hora</option>
+                                <option value="8 horas">8 horas</option>
+                                <option value="24 horas">24 horas</option>
+                                <option value="Nunca">Nunca</option>
+                                </select>
+                            <p className='text-sm text-gray-500'>
+                                Configuração atual: <span className='font-semibold'>{silenciarnotificacoes}</span>
+                            </p>
+                            </div>
 
                     </div>
 
                  
                     
 
-                    {/* Seção Controle Parental */}
-                    <div className="bg-white rounded-lg shadow-md p-6">
-                        <h2 className="text-purple-600 text-xl md:text-2xl lg:text-3xl font-bold mb-4">
-                            Controle Parental
-                        </h2>
-                        <div className="w-full h-1 bg-green-200 mb-6"></div>
-
-                        <div className="space-y-4 text-purple-500 text-base md:text-lg lg:text-xl font-medium">
-                            <p>Restrições de interação social.</p>
-                            <p>Relatórios de progresso enviados aos responsáveis.</p>
-                        </div>
-                    </div>
-
-
+                    
 
 
 
@@ -128,17 +128,17 @@ export default function Configuracoes() {
                             {/* Switch 1 - Desafios */}
                             <div className="flex items-center gap-3 flex-wrap">
                                 <button
-                                    onClick={() => setdesafios(!desafios)}
-                                    className={`w-12 h-6 flex items-center rounded-full p-1 border-2 border-green-300 transition-colors duration-300 flex-shrink-0 ${desafios ? "bg-purple-500" : "bg-gray-300"
+                                    onClick={() => setLembreteDiario(!lembretediario)}
+                                    className={`w-12 h-6 flex items-center rounded-full p-1 border-2 border-green-300 transition-colors duration-300 flex-shrink-0 ${lembretediario ? "bg-purple-500" : "bg-gray-300"
                                         }`}
                                 >
                                     <div
-                                        className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform duration-300 ${desafios ? "translate-x-6" : "translate-x-0"
+                                        className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform duration-300 ${lembretediario ? "translate-x-6" : "translate-x-0"
                                             }`}
                                     ></div>
                                 </button>
                                 <span className="text-gray-700 text-sm md:text-base">
-                                    Permitir que outros me desafiem em competições.
+                                    Lembrete diário de estudos
                                 </span>
                             </div>
 
@@ -147,17 +147,17 @@ export default function Configuracoes() {
                             {/* Switch 2 - Convites */}
                             <div className="flex items-center gap-3 flex-wrap">
                                 <button
-                                    onClick={() => setconvites(!convites)}
-                                    className={`w-12 h-6 flex items-center rounded-full p-1 border-2 border-green-400 transition-colors duration-300 flex-shrink-0 ${convites ? "bg-purple-500" : "bg-gray-300"
+                                    onClick={() => setProgressoeConquista(!progressoeconquista)}
+                                    className={`w-12 h-6 flex items-center rounded-full p-1 border-2 border-green-400 transition-colors duration-300 flex-shrink-0 ${progressoeconquista ? "bg-purple-500" : "bg-gray-300"
                                         }`}
                                 >
                                     <div
-                                        className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform duration-300 ${convites ? "translate-x-6" : "translate-x-0"
+                                        className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform duration-300 ${progressoeconquista ? "translate-x-6" : "translate-x-0"
                                             }`}
                                     ></div>
                                 </button>
                                 <span className="text-gray-700 text-sm md:text-base">
-                                    Receber ou não convites de amizade
+                                    Progresso e conquistas
                                 </span>
                             </div>
 
@@ -167,12 +167,12 @@ export default function Configuracoes() {
                             {/* Switch 3 - Progresso */}
                             <div className="flex items-center gap-3 flex-wrap">
                                 <button
-                                    onClick={() => setprogresso(!progresso)}
-                                    className={`w-12 h-6 flex items-center rounded-full p-1 border-2 border-green-400 transition-colors duration-300 flex-shrink-0 ${progresso ? "bg-purple-500" : "bg-gray-300"
+                                    onClick={() => setRankingCompeticao(!rankingcompeticao)}
+                                    className={`w-12 h-6 flex items-center rounded-full p-1 border-2 border-green-400 transition-colors duration-300 flex-shrink-0 ${rankingcompeticao ? "bg-purple-500" : "bg-gray-300"
                                         }`}
                                 >
                                     <div
-                                        className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform duration-300 ${progresso ? "translate-x-6" : "translate-x-0"
+                                        className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform duration-300 ${rankingcompeticao ? "translate-x-6" : "translate-x-0"
                                             }`}
                                     ></div>
                                 </button>
@@ -181,6 +181,45 @@ export default function Configuracoes() {
                                 </span>
                             </div>
                         </div>
+
+
+                        {/* Switch 4 - Interações Sociais */}
+                        <div className='flex items-center gap-3 flex-wrap mt-6'>
+                            <button
+                                onClick={() => setInteracoesSociais(!interacoessociais)}
+                                className={`w-12 h-6 flex items-center rounded-full p-1 border-2 border-green-400 transition-colors duration-300 flex-shrink-0 ${interacoessociais ? "bg-purple-500" : "bg-gray-300"
+                                    }`}
+                                    >
+                                       <div
+                                        className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform duration-300 ${interacoessociais ? "translate-x-6" : "translate-x-0"
+                                        }`}
+                                        ></div>
+                                </button>
+                                <span className='text-gray-700 text-sm md:text-base'>
+                                    interações sociais
+                                </span>
+                        </div>
+
+                        {/* Switch 5 - Eventos Especiais */}
+                         <div className='flex items-center gap-3 flex-wrap mt-6'>
+                            <button
+                                onClick={() => setEventosEspeciais(!eventosespeciais)}
+                                className={`w-12 h-6 flex items-center rounded-full p-1 border-2 border-green-400 transition-colors duration-300 flex-shrink-0 ${eventosespeciais ? "bg-purple-500" : "bg-gray-300"
+                                    }`}
+                                    >
+                                        <div
+                                        className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform duration-300 ${eventosespeciais ? "translate-x-6" : "translate-x-0"
+                                        }`}
+                                        ></div>
+                                    </button>
+                                <span className='text-gray-700 text-sm md:text-base'>
+                                    Eventos especiais
+                                </span>
+                                
+                         </div>
+
+
+
                     </div>
                 </div>
 

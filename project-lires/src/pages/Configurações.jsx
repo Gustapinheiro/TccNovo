@@ -14,7 +14,7 @@ export default function Configuracoes() {
             <SidebarLeft />
 
             {/* Conteúdo principal com margem para o sidebar esquerdo e direito */}
-            <div className="ml-48 xl:mr-80 p-4 lg:p-8 flex-1">
+            <div className="ml-96 xl:mr-80 p-4 lg:p-8 flex-1">
                 {/* Título principal */}
                 <h1 className="text-purple-600 font-bold text-2xl md:text-3xl lg:text-5xl mb-8 " >
                     Configurações de privacidade
