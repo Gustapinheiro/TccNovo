@@ -9,6 +9,7 @@ import FeedLires from './components/FeedLires';
 import EncerramentoL from './components/EncerramentoLires';
 import Configuracoes from './pages/Configurações';
 import Notificação from './pages/Notificação';
+import Segurança from './pages/Segurança';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path='/loja' element={<Home/>} />
           <Route path='/Praticar' element={<Loja/>} />
           <Route path='/Notificações' element={<Notificação/>} />
+          <Route path='/Segurança' element={<Segurança />} />
           {/* Add more routes as needed */}
         </Routes>
       </div>
