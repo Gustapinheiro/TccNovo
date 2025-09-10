@@ -10,6 +10,8 @@ import EncerramentoL from './components/EncerramentoLires';
 import Configuracoes from './pages/Configurações';
 import Notificação from './pages/Notificação';
 import Segurança from './pages/Segurança';
+import Gerenciamentodeconta from './pages/Gerenciamentodeconta';
+
 
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
           <Route path='/Praticar' element={<Loja/>} />
           <Route path='/Notificações' element={<Notificação/>} />
           <Route path='/Segurança' element={<Segurança />} />
+          <Route path='/Gerenciamentodeconta' element={<Gerenciamentodeconta />} />
+      
           {/* Add more routes as needed */}
         </Routes>
       </div>
